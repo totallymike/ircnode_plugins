@@ -37,5 +37,5 @@ var test_handler = function (act) {
  * The 'handler' property is the function that is called when the plugin
  * is triggered. In this example, '!test [PARAMS]' would call the
  * 'test_handler (act)' function. */
-exports.name = 'test';
-exports.handler = test_handler;
+exports.name = [ 'test' ];
+exports.handler = [ test_handler ];
