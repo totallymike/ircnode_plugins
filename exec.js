@@ -17,6 +17,5 @@ var exec_handler = function (act) {
   });
 };
 
-exports.name = 'exec';
-exports.handler = exec_handler;
-
+exports.name = [ 'exec' ];
+exports.handler = [ exec_handler ];
