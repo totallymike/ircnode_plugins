@@ -28,14 +28,16 @@ var test_handler = function (act) {
 
 /* Afterwards the plugin needs to be exported back to the "main" module.
  *
- * The 'name' property is how the plugin is referred to. That means that
- * if the plugin is named 'test', then '!test' will trigger it and the
- * '!enable test' and '!disable test' commands by admins would enable
- * and disable them, respectively. Disabling a plugin includes deataching
- * it from the event emitter.
+ * The 'name' property is how the plugin is referred to internally. That
+ * means that if the plugin is named 'test', then for example the data
+ * plugin stores will be linked with he name 'test'.
  *
- * The 'handler' property is the function that is called when the plugin
- * is triggered. In this example, '!test [PARAMS]' would call the
- * 'test_handler (act)' function. */
-exports.name = [ 'test' ];
-exports.handler = [ test_handler ];
+ * The 'commands' property is the mapping between triggers which the
+ * user calls to execute the command and the functions which are called
+ * when the plugin is triggered. These triggers are also the names which
+ * are used to disable and enable the triggers with '!enable <command>'
+ * and '!disable <command>'. In this example, '!test [PARAMS]' would call
+ * the 'test_handler (act)' function.
+ */
+exports.name = 'test';
+exports.commands = { 'test': test_handler }
