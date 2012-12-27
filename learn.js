@@ -179,5 +179,9 @@ var know_handler = function (act) {
   }
 };
 
-exports.name = [ 'learn', 'forget', 'know' ];
-exports.handler = [ learn_handler, forget_handler, know_handler ];
+exports.name = 'learn';
+exports.commands = {
+  'learn': learn_handler,
+  'forget': forget_handler,
+  'know': know_handler
+};
