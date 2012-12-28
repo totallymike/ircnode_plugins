@@ -40,4 +40,4 @@ var test_handler = function (act) {
  * the 'test_handler (act)' function.
  */
 exports.name = 'test';
-exports.commands = { 'test': test_handler }
+exports.commands = { 'test': test_handler };
