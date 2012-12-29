@@ -32,7 +32,7 @@ var test_handler = function (act) {
  * means that if the plugin is named 'test', then for example the data
  * plugin stores will be linked with he name 'test'.
  *
- * The 'commands' property is the mapping between triggers which the
+ * The 'hooks' property is the mapping between triggers which the
  * user calls to execute the command and the functions which are called
  * when the plugin is triggered. These triggers are also the names which
  * are used to disable and enable the triggers with '!enable <command>'
@@ -40,4 +40,4 @@ var test_handler = function (act) {
  * the 'test_handler (act)' function.
  */
 exports.name = 'test';
-exports.commands = { 'test': test_handler };
+exports.hooks = { 'test': test_handler };
