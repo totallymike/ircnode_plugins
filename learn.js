@@ -104,7 +104,7 @@ function forget_handler (act) {
     var listenerInfo = parsePhrase(listener);
 
     if (exports.store[listenerInfo.storage] !== undefined) {
-      delete exports.store.action[listener.substr(4)];
+      delete exports.store[listenerInfo.storage];
       if (listenerInfo.parsed === listenerInfo.storage)
         irc.privmsg(act.nick, 'Deleted the listener for \'' + listenerInfo.parsed + '\'.');
       else
